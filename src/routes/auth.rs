@@ -6,7 +6,7 @@ struct Message {
     message: &'static str,
 }
 
-#[get("/login")]
+#[post("/login")]
 fn auth_index() -> Json<Message> {
     let message = Message { message: "Login OK!" };
     Json(message)
